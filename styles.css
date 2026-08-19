@@ -2106,39 +2106,425 @@ body.light-theme .ecv-preview-card {
   to { transform: translateX(0); opacity: 1; }
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 968px) {
+/* ==========================================================================
+   COMPREHENSIVE DUAL PHONE & PC RESPONSIVE SUITE
+   ========================================================================== */
+
+/* Universal Touch & Accessibility Enhancements */
+button, input, select, textarea, .arrow-tile, .btn-primary, .btn-secondary-outline, .icon-btn {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 1. TABLETS & SMALL LAPTOPS (Max Width: 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
   .hero-main-title {
-    font-size: 3rem;
+    font-size: clamp(2.4rem, 5vw, 3.2rem);
   }
+
   .vision-pillars-grid {
-    grid-template-columns: 1fr;
-    max-width: 550px;
-    margin: 0 auto 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
-  .neural-card-container, .cognitive-card-container {
-    padding: 2.5rem 1.5rem;
-  }
-  .puzzle-options-grid {
-    grid-template-columns: 1fr;
+
+  .arrow-game-board {
+    grid-template-columns: repeat(5, 62px);
+    grid-template-rows: repeat(5, 62px);
+    gap: 8px;
+    padding: 14px;
   }
 }
 
+/* 2. TABLETS & LARGE SMARTPHONES (Max Width: 768px) */
 @media (max-width: 768px) {
-  .hero-main-title {
-    font-size: 2.3rem;
+  .site-header {
+    padding: 0.5rem 0;
   }
-  .hero-vision-lead {
+
+  .nav-wrapper {
+    height: auto;
+    min-height: 72px;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: space-between;
+  }
+
+  .brand-logos {
+    padding: 4px 10px;
+    gap: 0.5rem;
+  }
+
+  .brand-logo-img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand-logo-img.bit-main-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .brand-title {
     font-size: 1.12rem;
   }
+
+  .brand-badge {
+    font-size: 0.68rem;
+    padding: 2px 6px;
+  }
+
+  .brand-sub {
+    font-size: 0.72rem;
+  }
+
+  .nav-actions {
+    gap: 0.45rem;
+  }
+
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 0.95rem;
+  }
+
+  .trigger-track-modal {
+    padding: 0.55rem 0.9rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .trigger-apply-modal {
+    padding: 0.6rem 1.1rem !important;
+    font-size: 0.88rem !important;
+  }
+
+  /* Hero Section */
+  .hero-executive-section {
+    padding: 2.75rem 0 3.5rem;
+  }
+
+  .hero-status-badge {
+    font-size: 0.76rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-club-tag {
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-main-title {
+    font-size: clamp(2rem, 6.5vw, 2.6rem);
+    line-height: 1.22;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-vision-lead {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    margin-bottom: 2.25rem;
+  }
+
+  .vision-pillars-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .pillar-card {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .pillar-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .pillar-title {
+    font-size: 1.1rem;
+  }
+
+  .hero-cta-group {
+    width: 100%;
+  }
+
+  .hero-cta-group > div {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .btn-primary.btn-large, .btn-secondary-outline.trigger-track-modal {
+    width: 100%;
+    padding: 1.1rem 1.5rem !important;
+    font-size: 1.1rem !important;
+  }
+
+  /* Stage Progress Navigation Bar */
+  .stage-nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .stage-steps-pill {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 3px 0;
+    gap: 0.45rem;
+    scrollbar-width: none;
+  }
+
+  .stage-steps-pill::-webkit-scrollbar {
+    display: none;
+  }
+
+  .step-bubble {
+    font-size: 0.75rem;
+    padding: 4px 9px;
+    flex-shrink: 0;
+  }
+
+  /* Modals */
+  .modal-overlay {
+    padding: 1rem 0.65rem 2rem;
+  }
+
+  .modal-container {
+    max-height: 94vh;
+    border-radius: var(--radius-md);
+  }
+
+  .modal-header {
+    padding: 1.2rem 1.25rem;
+  }
+
+  .modal-header h3 {
+    font-size: 1.15rem;
+  }
+
+  .modal-body {
+    padding: 1.5rem 1.15rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-control, .psych-textarea {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    padding: 0.75rem 0.95rem;
+  }
+
+  /* Stage 2 Psychological */
+  .neural-card-container {
+    padding: 2.2rem 1.25rem;
+  }
+
   .neural-title {
     font-size: 1.85rem;
   }
-  .form-row {
-    grid-template-columns: 1fr;
+
+  .neural-desc {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
   }
+
+  .psych-question-box {
+    padding: 1.35rem 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .psych-q-text {
+    font-size: 0.96rem;
+  }
+
+  /* Stage 3 Cognitive Arrow Game */
+  .cognitive-card-container {
+    padding: 2.2rem 1.25rem;
+  }
+
+  .cognitive-card-container h2 {
+    font-size: 1.95rem !important;
+  }
+
+  .game-stats-hud {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    padding: 0.75rem 0.6rem;
+  }
+
+  .hud-label {
+    font-size: 0.68rem;
+  }
+
+  .hud-val {
+    font-size: 1.15rem;
+  }
+
+  .arrow-game-board {
+    grid-template-columns: repeat(5, 52px);
+    grid-template-rows: repeat(5, 52px);
+    gap: 6px;
+    padding: 10px;
+  }
+
+  .arrow-icon-svg {
+    width: 26px;
+    height: 26px;
+    stroke-width: 2.6;
+  }
+
+  /* Stage 4 Project Showcase */
+  .showcase-card-container {
+    padding: 2.2rem 1.25rem;
+  }
+
+  .showcase-title {
+    font-size: 1.85rem;
+  }
+
+  .showcase-desc {
+    font-size: 0.95rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .project-drop-zone {
+    padding: 1.6rem 1rem;
+  }
+
+  .submit-app-btn-glow {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1.05rem 1.5rem;
+  }
+
+  /* Stage 5 Receipt */
+  .receipt-card {
+    padding: 2.2rem 1.25rem;
+  }
+
+  .receipt-id-tag {
+    font-size: 1.25rem;
+    padding: 0.6rem 1.2rem;
+    word-break: break-all;
+  }
+
+  .receipt-details-table {
+    font-size: 0.85rem;
+  }
+
+  .receipt-details-table td {
+    padding: 0.55rem 0.4rem;
+  }
+
+  /* Footer */
   .footer-inner {
     flex-direction: column;
     text-align: center;
+    gap: 0.6rem;
+  }
+
+  .toast-container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+
+  .toast {
+    font-size: 0.88rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* 3. COMPACT SMARTPHONES & SMALL SCREENS (Max Width: 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .brand-title {
+    font-size: 1.02rem;
+  }
+
+  .hero-main-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-vision-lead {
+    font-size: 0.94rem;
+  }
+
+  .arrow-game-board {
+    grid-template-columns: repeat(5, 48px);
+    grid-template-rows: repeat(5, 48px);
+    gap: 5px;
+    padding: 8px;
+  }
+
+  .arrow-icon-svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .game-stats-hud {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .game-stats-hud .hud-stat-item:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .cv-choice-toggle {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cv-toggle-btn {
+    width: 100%;
+  }
+
+  .ecv-photo-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .ecv-card-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .tracking-app-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+/* 4. EXTRA SMALL PHONES (Max Width: 360px) */
+@media (max-width: 360px) {
+  .arrow-game-board {
+    grid-template-columns: repeat(5, 42px);
+    grid-template-rows: repeat(5, 42px);
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .arrow-icon-svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero-main-title {
+    font-size: 1.65rem;
   }
 }
