@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Information &amp; Technology Club (BIT) | Member Recruitment &amp; Assessment | BBA 16 &amp; 17</title>
+  <meta name="description" content="Official Member Recruitment and Multi-Stage Assessment for Business Information & Technology Club (BIT), AIBA Savar. Exclusively for BBA 16 and BBA 17.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/bit-logo.jpg">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       STAGE 1: MAIN LANDING & APPLICATION PROFILE VIEW
+       ========================================================================== -->
+  <div class="app-stage-view active-stage" id="stageLanding">
+    
+    <!-- Dynamic Background Canvas & Mesh -->
+    <div class="dynamic-background-stage" aria-hidden="true">
+      <div class="bg-perspective-grid"></div>
+      <div class="ambient-glow-orb orb-primary"></div>
+      <div class="ambient-glow-orb orb-secondary"></div>
+      <canvas id="constellationCanvas"></canvas>
+      <div class="cursor-ambient-glow" id="cursorGlow"></div>
+    </div>
+
+    <!-- Header (Official Logos & Controls) -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          
+          <a href="#" class="brand-cluster" title="Business Information and Technology (BIT) Club - Army IBA">
+            <div class="brand-logos">
+              <img src="assets/aiba-logo.jpg" alt="Army IBA Logo" class="brand-logo-img" title="Army Institute of Business Administration (Army IBA)">
+              <div class="logo-divider"></div>
+              <img src="assets/bit-logo.jpg" alt="Business IT Club Logo" class="brand-logo-img bit-main-logo" title="Business Information and Technology (BIT) Club">
+            </div>
+            <div class="brand-info">
+              <div class="brand-title">
+                <span>BUSINESS IT CLUB</span>
+                <span class="brand-badge">BBA 16 &bull; 17</span>
+              </div>
+              <span class="brand-sub">Army Institute of Business Administration (Army IBA)</span>
+            </div>
+          </a>
+
+          <div class="nav-actions">
+            <button id="soundToggleBtn" class="icon-btn" title="Toggle Sound FX" aria-label="Toggle Sound">
+              <span id="soundIcon">🔊</span>
+            </button>
+            <button id="themeToggleBtn" class="icon-btn" title="Toggle Theme" aria-label="Toggle Theme">
+              <span id="themeIcon">☀️</span>
+            </button>
+            <button class="btn-secondary-outline trigger-track-modal" style="padding: 0.65rem 1.25rem;">
+              <span>🔍 Track Status</span>
+            </button>
+            <button class="btn-primary trigger-apply-modal">
+              <span>Apply Now</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Hero Stage -->
+    <main style="display: flex; flex-direction: column; flex-grow: 1; position: relative; z-index: 2;">
+      <section class="hero-executive-section" id="hero">
+        <div class="container">
+          
+          <div class="hero-content-wrapper">
+            
+            <div class="hero-status-badge">
+              <span class="pulse-radar-dot"></span>
+              <span>OFFICIAL RECRUITMENT LIVE &bull; BBA 16 &amp; BBA 17</span>
+            </div>
+
+            <div class="hero-club-tag">
+              Business Information and Technology (BIT) Club
+            </div>
+
+            <h1 class="hero-main-title">
+              Empowering Future Leaders Through <br>
+              <span class="gradient-text">Innovation &amp; Technology</span>
+            </h1>
+
+            <p class="hero-vision-lead">
+              Operating under the <strong>Army Institute of Business Administration (Army IBA)</strong>, our vision is to become the leading business and technology club by empowering future leaders through innovation, technology, entrepreneurship, and professional excellence—inviting <span class="highlight-intake">BBA 16 &amp; BBA 17</span> students to shape the digital frontier.
+            </p>
+
+            <div class="vision-pillars-grid">
+              <div class="pillar-card">
+                <span class="pillar-icon">⚡</span>
+                <h3 class="pillar-title">Tech Innovation</h3>
+                <p class="pillar-desc">
+                  Promoting technological innovation, emerging digital tools, and creative problem-solving among business students.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <span class="pillar-icon">🚀</span>
+                <h3 class="pillar-title">Skill Mastery</h3>
+                <p class="pillar-desc">
+                  Developing world-class professional, technical, analytical, and leadership skills for modern career excellence.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <span class="pillar-icon">🌐</span>
+                <h3 class="pillar-title">Events &amp; Competitions</h3>
+                <p class="pillar-desc">
+                  Organizing high-impact national seminars, hands-on workshops, case competitions, and executive networking events.
+                </p>
+              </div>
+
+              <div class="pillar-card">
+                <span class="pillar-icon">🎯</span>
+                <h3 class="pillar-title">Future Readiness</h3>
+                <p class="pillar-desc">
+                  Building future-ready, versatile business professionals through practical, project-based experiential learning.
+                </p>
+              </div>
+            </div>
+
+            <div class="hero-cta-group">
+              <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; align-items: center;">
+                <button class="btn-primary btn-large trigger-apply-modal">
+                  <span>Apply for Membership (BBA 16 / 17)</span>
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="btn-secondary-outline trigger-track-modal" style="padding: 1.25rem 2.4rem; font-size: 1.15rem; border-radius: var(--radius-xl);">
+                  <span>🔎 Track Application Status</span>
+                </button>
+              </div>
+              <div class="cta-subtext">
+                <span>🔒 Official Army IBA Multi-Stage Candidate Assessment</span> &bull; 
+                <span>Includes Behavioral, Cognitive &amp; Project Showcase</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-inner">
+          <div>
+            <strong>Business Information and Technology (BIT) Club</strong> &bull; Army Institute of Business Administration (Army IBA)
+          </div>
+          <div>
+            &copy; 2026 BIT Club. All Rights Reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================================================
+       STAGE 2: PSYCHOLOGICAL & BEHAVIORAL PROFILING VIEW
+       ========================================================================== -->
+  <div class="app-stage-view" id="stagePsychological">
+    
+    <div class="neural-bg-layer" aria-hidden="true">
+      <div class="neural-orb neural-orb-1"></div>
+      <div class="neural-orb neural-orb-2"></div>
+    </div>
+
+    <!-- Stage Progress Header -->
+    <div class="stage-progress-header">
+      <div class="container">
+        <div class="stage-nav-inner">
+          <div class="brand-cluster">
+            <div class="brand-logos">
+              <img src="assets/bit-logo.jpg" alt="BIT" class="brand-logo-img bit-main-logo">
+            </div>
+            <span style="font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em;">BIT Club Assessment &bull; AIBA Savar</span>
+          </div>
+
+          <div class="stage-steps-pill">
+            <span class="step-bubble completed">✓ 1. Profile</span>
+            <span class="step-bubble active">🧠 2. Psychological</span>
+            <span class="step-bubble">⚡ 3. Cognitive</span>
+            <span class="step-bubble">🎨 4. Showcase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="neural-stage-wrapper">
+      <div class="container">
+        
+        <div class="neural-card-container">
+          
+          <div class="neural-badge">
+            <span>🧠 STAGE 2 OF 4: BEHAVIORAL &amp; PSYCHOLOGICAL PROFILING</span>
+          </div>
+
+          <h2 class="neural-title">
+            Understanding Your <span class="gradient-text">Mindset &amp; Resilience</span>
+          </h2>
+
+          <p class="neural-desc">
+            Answer these 3 scenario-based questions thoughtfully. There are no right or wrong answers—we value authentic reflection, constructive resilience, and alignment with club values.
+          </p>
+
+          <form id="psychForm" novalidate>
+            
+            <!-- Question 1 -->
+            <div class="psych-question-box">
+              <span class="psych-q-num">Scenario Question 01</span>
+              <p class="psych-q-text">
+                If you dedicate immense time and effort to a high-priority project or workplace assignment, but your final deliverable faces critical feedback or rejection from senior leadership, how do you process this feedback, and what concrete steps do you take next? <span class="required">*</span>
+              </p>
+              <textarea id="psychQ1" class="psych-textarea" placeholder="Describe your reaction, mindset shift, and how you iterate forward constructively..." rows="4" required></textarea>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="psych-question-box">
+              <span class="psych-q-num">Core Alignment Question 02</span>
+              <p class="psych-q-text">
+                Beyond adding an extracurricular organization to your CV, what meaningful personal, professional, and leadership outcomes do you genuinely seek from Business IT Club (BIT)? <span class="required">*</span>
+              </p>
+              <textarea id="psychQ2" class="psych-textarea" placeholder="Share your intrinsic goals, what you hope to learn, and the culture you wish to build..." rows="4" required></textarea>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="psych-question-box">
+              <span class="psych-q-num">Leadership &amp; Pressure Question 03</span>
+              <p class="psych-q-text">
+                During a flagship tech event or urgent corporate deadline, unexpected technical disruptions occur and team members have conflicting opinions. How do you navigate interpersonal friction and drive collaborative execution? <span class="required">*</span>
+              </p>
+              <textarea id="psychQ3" class="psych-textarea" placeholder="Explain your problem-solving approach under ambiguity and interpersonal conflict..." rows="4" required></textarea>
+            </div>
+
+            <div style="margin-top: 2rem; display: flex; justify-content: flex-end;">
+              <button type="submit" class="btn-primary" id="btnNextToCognitive">
+                <span>Next: Cognitive Assessment &rarr;</span>
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==========================================================================
+       STAGE 3: COGNITIVE ARROW CLEARANCE CHALLENGE VIEW (5x5 COMPLEX MATRIX)
+       ========================================================================== -->
+  <div class="app-stage-view" id="stageCognitive">
+    
+    <div class="cyber-bg-layer" aria-hidden="true">
+      <div class="cyber-grid-mesh"></div>
+    </div>
+
+    <!-- Stage Progress Header -->
+    <div class="stage-progress-header">
+      <div class="container">
+        <div class="stage-nav-inner">
+          <div class="brand-cluster">
+            <div class="brand-logos">
+              <img src="assets/bit-logo.jpg" alt="BIT" class="brand-logo-img bit-main-logo">
+            </div>
+            <span style="font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em;">BIT Club Assessment &bull; AIBA Savar</span>
+          </div>
+
+          <div class="stage-steps-pill">
+            <span class="step-bubble completed">✓ 1. Profile</span>
+            <span class="step-bubble completed">✓ 2. Psychological</span>
+            <span class="step-bubble active">⚡ 3. Cognitive Response</span>
+            <span class="step-bubble">🎨 4. Showcase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cognitive-stage-wrapper">
+      <div class="container">
+        
+        <div class="cognitive-card-container">
+          
+          <div class="hero-status-badge" style="background: rgba(0, 240, 255, 0.12); border-color: rgba(0, 240, 255, 0.45); color: var(--accent-cyan);">
+            <span class="pulse-radar-dot" style="background: var(--accent-cyan); box-shadow: 0 0 14px var(--accent-cyan);"></span>
+            <span>STAGE 3 OF 4: COMPLEX COGNITIVE SPEED BENCHMARK</span>
+          </div>
+
+          <h2 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; letter-spacing: -0.035em; margin-bottom: 0.75rem;">
+            Cognitive &amp; Spatial <span style="background: var(--gradient-cyber); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Arrow Matrix (25 Nodes)</span>
+          </h2>
+
+          <p style="font-size: 1.05rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto;">
+            Evaluate your rapid spatial logic, pattern recognition, and decisive sequence execution under high time pressure.
+          </p>
+
+          <!-- PRE-START RULE BRIEFING BOX (SHOWN BEFORE CLICKING START) -->
+          <div class="cognitive-rules-box" id="cognitiveRulesBox">
+            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; color: var(--accent-cyan); font-weight: 800;">
+              🏹 High-Complexity 25-Arrow Matrix Challenge
+            </h4>
+
+            <ul class="cognitive-rules-list">
+              <li>
+                <span class="rules-icon">⏱️</span>
+                <span><strong>Strict 40 Seconds Limit:</strong> You have only 40 seconds to clear all <strong>25 interlocking arrow nodes</strong>.</span>
+              </li>
+              <li>
+                <span class="rules-icon">🎯</span>
+                <span><strong>Complex Dependency Chains:</strong> Arrows that point into another arrow are completely locked and will vibrate red. You must clear unobstructed outer exit paths first to trigger cascading chain releases!</span>
+              </li>
+              <li>
+                <span class="rules-icon">🧠</span>
+                <span><strong>For Quick Thinkers:</strong> Plan 2 to 3 steps ahead to unlock the heavily congested inner core tiles before the live timer expires.</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: 2rem; text-align: center;">
+              <button type="button" class="btn-primary btn-large" id="btnStartCognitiveChallenge">
+                <span>⚡ Start 40-Second Arrow Challenge (25 Nodes)</span>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- ACTIVE ARROW GAME SECTION (HIDDEN UNTIL USER CLICKS START) -->
+          <div id="cognitiveActiveGame" style="display: none;">
+            
+            <!-- Live Timer & Game Stats HUD -->
+            <div class="game-stats-hud">
+              <div class="hud-stat-item">
+                <span class="hud-label">⏱️ TIME REMAINING</span>
+                <span class="hud-val" id="timerDisplay">00:40</span>
+              </div>
+              <div class="hud-stat-item">
+                <span class="hud-label">🎯 ARROWS CLEARED</span>
+                <span class="hud-val" id="arrowsClearedCount">0 / 25</span>
+              </div>
+              <div class="hud-stat-item">
+                <span class="hud-label">⚡ REFLEX STATUS</span>
+                <span class="hud-val" id="gameAccuracyScore" style="font-size: 1.15rem; color: #10B981;">Active</span>
+              </div>
+            </div>
+
+            <div class="timer-progress-track">
+              <div class="timer-progress-fill" id="timerProgressBar"></div>
+            </div>
+
+            <!-- Arrow Game Arena -->
+            <div class="arrow-game-arena">
+              <p class="arrow-game-hint">
+                💡 <em>Click any arrow whose exit trajectory is completely free. Clearing perimeter arrows unlocks inner nodes!</em>
+              </p>
+              
+              <div class="arrow-game-board" id="arrowGameBoard">
+                <!-- Dynamically generated 5x5 Arrow Tiles -->
+              </div>
+
+              <!-- Victory Banner -->
+              <div class="game-victory-banner" id="gameVictoryBanner" style="display: none;">
+                <h3>🎉 Master-Class Spatial &amp; Cognitive Reflexes!</h3>
+                <p>All 25 arrows successfully cleared in record time! Proceeding to project showcase...</p>
+              </div>
+            </div>
+
+            <div class="btn-next-to-showcase-wrap" id="cognitiveNextWrap" style="display: none;">
+              <button type="button" class="btn-primary btn-large" id="btnNextToShowcase">
+                <span>Next: Project &amp; Portfolio Showcase &rarr;</span>
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==========================================================================
+       STAGE 4: CREATIVE & TECHNICAL WORK SHOWCASE VIEW (PROJECT ATTACHMENTS)
+       ========================================================================== -->
+  <div class="app-stage-view" id="stageShowcase">
+    
+    <div class="showcase-bg-layer" aria-hidden="true"></div>
+
+    <!-- Stage Progress Header -->
+    <div class="stage-progress-header">
+      <div class="container">
+        <div class="stage-nav-inner">
+          <div class="brand-cluster">
+            <div class="brand-logos">
+              <img src="assets/bit-logo.jpg" alt="BIT" class="brand-logo-img bit-main-logo">
+            </div>
+            <span style="font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em;">BIT Club Assessment &bull; AIBA Savar</span>
+          </div>
+
+          <div class="stage-steps-pill">
+            <span class="step-bubble completed">✓ 1. Profile</span>
+            <span class="step-bubble completed">✓ 2. Psychological</span>
+            <span class="step-bubble completed">✓ 3. Cognitive</span>
+            <span class="step-bubble active">🎨 4. Work Showcase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-stage-wrapper">
+      <div class="container">
+        
+        <div class="showcase-card-container">
+          
+          <div class="showcase-badge">
+            <span>🎨 STAGE 4 OF 4: PROJECT &amp; WORK ATTACHMENTS</span>
+          </div>
+
+          <h2 class="showcase-title">
+            Attach Your <span class="gradient-text">Projects, Designs &amp; Work</span>
+          </h2>
+
+          <p class="showcase-desc">
+            Have you created any graphic designs, web applications, video edits, articles, marketing campaigns, or case studies? Attach files or links directly below <em>(Optional but highly recommended for fast-track selection)</em>.
+          </p>
+
+          <form id="showcaseForm" novalidate>
+            
+            <!-- Helpful Guidance Note -->
+            <div style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-sm); padding: 0.85rem 1.25rem; margin-bottom: 1.75rem; display: flex; align-items: center; gap: 0.75rem;">
+              <span style="font-size: 1.2rem;">💡</span>
+              <span style="font-size: 0.88rem; color: var(--text-secondary);">
+                <strong>Note:</strong> This section is <strong>completely optional</strong>. If you do not have any past projects or files to attach, you can proceed directly by clicking <strong>"Submit Your Application"</strong> below.
+              </span>
+            </div>
+
+            <!-- Direct Multi-File Upload Drop Zone (Optional) -->
+            <div class="form-group">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                <label class="form-label" style="margin-bottom: 0;">Upload Project Files &amp; Media Attachments</label>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--text-muted); background: rgba(255, 255, 255, 0.06); padding: 2px 8px; border-radius: var(--radius-full); border: 1px solid var(--border-subtle);">Optional</span>
+              </div>
+              
+              <div class="project-drop-zone" id="projectDropZone">
+                <input type="file" id="projectFileInput" multiple accept=".png,.jpg,.jpeg,.pdf,.doc,.docx,.zip,.rar,.mp4,.ai,.psd,.fig" class="file-hidden-input">
+                <div class="drop-zone-content">
+                  <span class="drop-icon" style="font-size: 2.3rem;">📁</span>
+                  <span class="drop-title">Click or Drag &amp; Drop project files, designs, or ZIP archives</span>
+                  <span class="drop-sub">Supported: PNG, JPG, PDF, MP4, AI, PSD, FIG, ZIP (Up to 10MB per file)</span>
+                </div>
+              </div>
+
+              <!-- Interactive Attached Files List -->
+              <div class="project-file-list" id="projectFileList"></div>
+            </div>
+
+            <!-- Project Links (GitHub / Behance / Figma / Drive) (Optional) -->
+            <div class="form-group">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                <label class="form-label" for="showcaseProjectLinks" style="margin-bottom: 0;">Project &amp; Portfolio Link(s)</label>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--text-muted); background: rgba(255, 255, 255, 0.06); padding: 2px 8px; border-radius: var(--radius-full); border: 1px solid var(--border-subtle);">Optional</span>
+              </div>
+              <input type="url" id="showcaseProjectLinks" class="form-control" placeholder="https://github.com/... or https://behance.net/... or Figma / Google Drive link">
+              <span class="form-help">Ensure link sharing permissions are set to public view if using Google Drive</span>
+            </div>
+
+            <!-- Project Description & Tools Used (Optional) -->
+            <div class="form-group">
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+                <label class="form-label" for="showcaseProjectDesc" style="margin-bottom: 0;">Project Description &amp; Tools Used</label>
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; color: var(--text-muted); background: rgba(255, 255, 255, 0.06); padding: 2px 8px; border-radius: var(--radius-full); border: 1px solid var(--border-subtle);">Optional</span>
+              </div>
+              <textarea id="showcaseProjectDesc" class="form-control" rows="3" placeholder="Briefly describe what you built, the tools used (e.g. Figma, Photoshop, React, Python, Illustrator, CapCut), and your specific role..."></textarea>
+            </div>
+
+            <!-- FINAL SUBMISSION CTA BUTTON -->
+            <div style="margin-top: 2.5rem; text-align: center; border-top: 1px solid var(--border-glass); padding-top: 2rem;">
+              <button type="submit" class="btn-primary btn-large submit-app-btn-glow" id="btnFinalSubmitApp">
+                <span>Submit Your Application ⚡</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 0.8rem;">
+                🔒 Final step: All profile details, assessments, and attached projects will be compiled &amp; dispatched.
+              </p>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==========================================================================
+       STAGE 5: FINAL REGISTRATION CONFIRMATION VIEW
+       ========================================================================== -->
+  <div class="app-stage-view" id="stageConfirmation">
+    
+    <div class="dynamic-background-stage" aria-hidden="true">
+      <div class="bg-perspective-grid"></div>
+      <div class="ambient-glow-orb orb-primary"></div>
+      <div class="ambient-glow-orb orb-secondary"></div>
+    </div>
+
+    <div class="receipt-stage-wrapper">
+      <div class="container">
+        
+        <div class="receipt-card" id="confirmationReceiptCard">
+          
+          <div class="receipt-header-logos">
+            <img src="assets/aiba-logo.jpg" alt="AIBA Savar">
+            <img src="assets/bit-logo.jpg" alt="Business IT Club" class="bit-main-logo">
+          </div>
+
+          <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-emerald); font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em;">
+            ✓ APPLICATION &amp; ALL ASSESSMENTS COMPLETED
+          </span>
+          
+          <h3 style="font-size: 1.6rem; font-weight: 900; margin-top: 0.35rem;">
+            Official Registration Confirmed
+          </h3>
+          
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem;">
+            Your profile, psychological responses, cognitive benchmark, and project attachments have been recorded.
+          </p>
+
+          <div>
+            <span class="receipt-id-tag" id="receiptAppId">BITC-2026-BBA16-0000</span>
+          </div>
+
+          <table class="receipt-details-table">
+            <tbody>
+              <tr>
+                <td>Applicant Name:</td>
+                <td id="receiptName">-</td>
+              </tr>
+              <tr>
+                <td>Student ID:</td>
+                <td id="receiptStudentId">-</td>
+              </tr>
+              <tr>
+                <td>Batch / Intake:</td>
+                <td id="receiptIntake">-</td>
+              </tr>
+              <tr>
+                <td>Preferred Sector:</td>
+                <td id="receiptSector" style="color: var(--accent-sky); font-weight: 800;">-</td>
+              </tr>
+              <tr>
+                <td>CV / Portfolio:</td>
+                <td id="receiptCvType" style="color: var(--accent-emerald); font-weight: 700;">-</td>
+              </tr>
+              <tr>
+                <td>Psychological Assessment:</td>
+                <td style="color: #C084FC; font-weight: 800;">✓ Completed (3/3)</td>
+              </tr>
+              <tr>
+                <td>Cognitive Arrow Game:</td>
+                <td id="receiptCognitiveStatus" style="color: var(--accent-cyan); font-weight: 800;">-</td>
+              </tr>
+              <tr>
+                <td>Projects &amp; Work Showcase:</td>
+                <td id="receiptProjectsStatus" style="color: #34D399; font-weight: 800;">-</td>
+              </tr>
+              <tr>
+                <td>Submission Date:</td>
+                <td id="receiptDate">-</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div style="margin-top: 1.75rem;">
+            <button type="button" class="btn-primary" id="doneModalBtn" style="padding: 0.95rem 3rem;">
+              <span>Done &bull; Return to Home</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ==========================================================================
+       GLOBAL APPLICATION FORM MODAL (BODY-LEVEL ROOT FIXED OVERLAY)
+       ========================================================================== -->
+  <div class="modal-overlay" id="applyModalOverlay" role="dialog" aria-modal="true" aria-labelledby="applyModalTitle">
+    <div class="modal-container">
+      
+      <div class="modal-header">
+        <h3 id="applyModalTitle">
+          <img src="assets/bit-logo.jpg" alt="BIT" style="width: 32px; height: 32px; vertical-align: middle; border-radius: 6px; box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);">
+          <span>Stage 1: Membership Registration Profile</span>
+        </h3>
+        <button class="modal-close-btn" id="closeApplyModal" aria-label="Close Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <form id="recruitmentForm" novalidate>
+          <div id="formFieldsContainer">
+            
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+              Please complete your personal and domain details below. Membership recruitment is open strictly for <strong>BBA 16 &amp; BBA 17</strong> students of AIBA Savar.
+            </p>
+
+            <div class="form-group">
+              <label class="form-label" for="appName">Full Name <span class="required">*</span></label>
+              <input type="text" id="appName" class="form-control" placeholder="e.g. Abrar Al Fahim" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="appStudentId">Student ID <span class="required">*</span></label>
+                <input type="text" id="appStudentId" class="form-control" placeholder="e.g. 2024-1-17-045" required>
+                <span class="form-help">Your official AIBA Student ID</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="appIntake">Batch / Intake <span class="required">*</span></label>
+                <select id="appIntake" class="form-control" required>
+                  <option value="">Select your intake...</option>
+                  <option value="BBA 16">BBA 16</option>
+                  <option value="BBA 17">BBA 17</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="appEmail">Email <span class="required">*</span></label>
+                <input type="email" id="appEmail" class="form-control" placeholder="e.g. name@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="appPhone">Contact Number <span class="required">*</span></label>
+                <input type="tel" id="appPhone" class="form-control" placeholder="e.g. 017XXXXXXXX" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="appSector">Preferred Working Sector <span class="required">*</span></label>
+              <select id="appSector" class="form-control" required>
+                <option value="">Select your preferred sector...</option>
+                <option value="Graphics Designing">Graphics Designing</option>
+                <option value="Creative Writing">Creative Writing</option>
+                <option value="Social Media Handling">Social Media Handling</option>
+                <option value="Photography and Video Editing">Photography and Video Editing</option>
+                <option value="Resource Management">Resource Management</option>
+              </select>
+              <span class="form-help">Choose the primary domain where you wish to contribute</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="appStatement">Statement of Motivation <span class="required">*</span></label>
+              <textarea id="appStatement" class="form-control" placeholder="Tell us why you want to join BIT Club and how you hope to contribute to your chosen sector..." rows="3" required></textarea>
+            </div>
+
+            <!-- Mandatory CV / Portfolio Section with Dual Options -->
+            <div class="form-group cv-submission-group">
+              <div class="cv-section-header">
+                <label class="form-label" style="margin-bottom: 0;">CV / Portfolio Submission <span class="required">*</span></label>
+                <span class="cv-badge-mandatory">Mandatory</span>
+              </div>
+              <p class="form-help" style="margin-bottom: 0.85rem;">Choose your preferred method to provide your CV:</p>
+
+              <div class="cv-choice-toggle">
+                <button type="button" class="cv-toggle-btn active" id="btnChooseUpload">
+                  <span>📁 Upload CV / Drive Link</span>
+                </button>
+                <button type="button" class="cv-toggle-btn" id="btnChooseCreateEcv">
+                  <span>✨ Create Your CV Now (E-CV)</span>
+                </button>
+              </div>
+
+              <div class="cv-panel active" id="cvUploadPanel">
+                <div class="file-drop-zone" id="fileDropZone">
+                  <input type="file" id="cvFileInput" accept=".pdf,.doc,.docx,.jpg,.png" class="file-hidden-input">
+                  <div class="drop-zone-content" id="dropZoneContent">
+                    <span class="drop-icon">📄</span>
+                    <span class="drop-title">Click to upload or drag &amp; drop your CV / Resume</span>
+                    <span class="drop-sub">Supported formats: PDF, DOC, DOCX, PNG, JPG (Max 10MB)</span>
+                  </div>
+                  <div class="drop-zone-selected" id="dropZoneSelected" style="display: none;">
+                    <div class="selected-file-info">
+                      <span class="selected-icon">📎</span>
+                      <div class="selected-meta">
+                        <span class="selected-filename" id="selectedFileName">resume.pdf</span>
+                        <span class="selected-filesize" id="selectedFileSize">1.2 MB</span>
+                      </div>
+                    </div>
+                    <button type="button" class="btn-remove-file" id="btnRemoveFile" title="Remove file">&times;</button>
+                  </div>
+                </div>
+
+                <div class="cv-or-divider"><span>OR PASTE DRIVE / PORTFOLIO LINK</span></div>
+                <input type="url" id="appPortfolio" class="form-control" placeholder="https://drive.google.com/... or https://linkedin.com/in/...">
+              </div>
+
+              <div class="cv-panel" id="cvCreatePanel" style="display: none;">
+                <div class="ecv-builder-box">
+                  <div class="ecv-builder-header">
+                    <h4>✨ Interactive E-CV Structure</h4>
+                    <p>Provide your details to auto-generate a structured digital CV attached to your membership application.</p>
+                  </div>
+
+                  <div class="ecv-photo-row">
+                    <div class="ecv-photo-preview-wrap">
+                      <img id="ecvPhotoPreview" src="assets/bit-logo.jpg" alt="Profile Preview" class="ecv-photo-img">
+                      <label for="ecvPhotoInput" class="ecv-photo-upload-badge">📷 Upload</label>
+                      <input type="file" id="ecvPhotoInput" accept="image/*" style="display: none;">
+                    </div>
+                    <div class="ecv-photo-instructions">
+                      <strong>Profile Picture <span class="required">*</span></strong>
+                      <span>Attach a formal / clear picture of yourself (JPG/PNG).</span>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ecvAddress">Permanent Address <span class="required">*</span></label>
+                    <input type="text" id="ecvAddress" class="form-control" placeholder="e.g. House #12, Road #4, Savar / Dhaka">
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ecvSkills">Key Skills &amp; Proficiencies <span class="required">*</span></label>
+                    <textarea id="ecvSkills" class="form-control" rows="2" placeholder="e.g. Adobe Photoshop, Illustrator, Creative Copywriting, Video Editing, Public Speaking..."></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ecvExperience">Work Experience &amp; Extracurricular Activities <span class="required">*</span></label>
+                    <textarea id="ecvExperience" class="form-control" rows="3" placeholder="e.g. Member of college cultural club, freelance graphic design, event management volunteer..."></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="ecvAchievements">Achievements &amp; Honors <span class="required">*</span></label>
+                    <textarea id="ecvAchievements" class="form-control" rows="2" placeholder="e.g. Champion in Debate, 1st place in Science Fair, Dean's List Honor..."></textarea>
+                  </div>
+
+                  <div class="ecv-actions-bar">
+                    <button type="button" class="btn-primary" id="btnSaveAttachEcv" style="padding: 0.8rem 1.8rem;">
+                      <span>✓ Save &amp; Attach E-CV</span>
+                    </button>
+                  </div>
+
+                  <div class="ecv-preview-card" id="ecvPreviewCard" style="display: none;">
+                    <div class="ecv-card-header">
+                      <img id="ecvCardPhoto" src="assets/bit-logo.jpg" alt="Profile" class="ecv-card-avatar">
+                      <div class="ecv-card-main-meta">
+                        <h4 id="ecvCardName">Applicant Name</h4>
+                        <span id="ecvCardSub" class="ecv-card-sub">BBA 16 &bull; AIBA Savar</span>
+                        <span id="ecvCardAddress" class="ecv-card-address">📍 Savar, Dhaka</span>
+                      </div>
+                      <span class="ecv-attached-tag">✓ E-CV READY &amp; ATTACHED</span>
+                    </div>
+                    <div class="ecv-card-body">
+                      <div class="ecv-section">
+                        <label>KEY SKILLS</label>
+                        <p id="ecvCardSkills">-</p>
+                      </div>
+                      <div class="ecv-section">
+                        <label>EXPERIENCE &amp; ACTIVITIES</label>
+                        <p id="ecvCardExperience">-</p>
+                      </div>
+                      <div class="ecv-section">
+                        <label>ACHIEVEMENTS &amp; HONORS</label>
+                        <p id="ecvCardAchievements">-</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div style="margin-top: 2rem; border-top: 1px solid var(--border-glass); padding-top: 1.5rem; text-align: right;">
+              <button type="submit" class="btn-primary" id="submitFormBtn">
+                <span>Proceed to Psychological Assessment &rarr;</span>
+              </button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       APPLICATION STATUS TRACKER MODAL (BODY ROOT LEVEL)
+       ========================================================================== -->
+  <div class="modal-overlay" id="trackModalOverlay" role="dialog" aria-modal="true" aria-labelledby="trackModalTitle">
+    <div class="modal-container" style="max-width: 640px;">
+      
+      <div class="modal-header">
+        <h3 id="trackModalTitle">
+          <img src="assets/bit-logo.jpg" alt="BIT" style="width: 30px; height: 30px; vertical-align: middle; border-radius: 6px; box-shadow: 0 0 10px rgba(56, 189, 248, 0.4);">
+          <span>Track Application Status</span>
+        </h3>
+        <button class="modal-close-btn" id="closeTrackModal" aria-label="Close Tracking Modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <form id="trackStatusForm" novalidate>
+          <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 1.25rem;">
+            Enter your unique <strong>Application ID</strong> (e.g. <code>BITC-2026-BBA16-0123</code>) or registered <strong>Student ID</strong> to check your current recruitment outcome.
+          </p>
+
+          <div class="form-group">
+            <label class="form-label" for="trackInputQuery">Application ID or Student ID <span class="required">*</span></label>
+            <input type="text" id="trackInputQuery" class="form-control" placeholder="e.g. BITC-2026-BBA16-0123 or 2024-1-17-045" required>
+          </div>
+
+          <div style="margin-top: 1.5rem;">
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Check Recruitment Status 🔍</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Dynamic Result Area -->
+        <div id="trackResultArea" style="display: none;">
+          <div class="tracking-status-card">
+            <div class="tracking-status-pill pending">⏳ Status: Under Assessment / Review</div>
+            <h4>The recruitment results haven't been published yet.</h4>
+            <p>
+              All candidate profiles, psychological assessments, cognitive benchmarks, and attached projects for BBA 16 &amp; BBA 17 are currently being evaluated by the BIT Executive Committee. Official admission selections and interview call-ups will be announced shortly.
+            </p>
+            <div class="tracking-app-meta">
+              <span>Queried ID: <strong id="trackDisplayId">-</strong></span>
+              <span>Organization: <strong>BIT Club &bull; Army IBA</strong></span>
+              <span>Outcome: <strong style="color: #FBBF24;">Results Pending Publication</strong></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript Controller -->
+  <script src="script.js"></script>
+</body>
+</html>
